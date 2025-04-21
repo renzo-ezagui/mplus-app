@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class AIService {
-  static const String _apiKey = 'sk-YOUR_EXAMPLE_KEY'; // Reemplaza por tu clave real
+  static const String _apiKey = 'sk-YOUR_EXAMPLE_KEY'; // Replace with your actual key
   static const String _apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   static Future<Map<String, dynamic>> generateManifestationPlan(String intention) async {
@@ -17,11 +17,11 @@ class AIService {
         "messages": [
           {
             "role": "system",
-            "content": "Actúa como una guía holística sabia y amorosa llamada 'Lúa'. Tu tarea es ayudar a las personas a manifestar sus deseos desde su intención profunda y alineada con su esencia."
+            "content": "Act as a loving holistic guide called 'Lúa'. Your job is to help people manifest desires from deep aligned intention."
           },
           {
             "role": "user",
-            "content": "Quiero manifestar: $intention"
+            "content": "I want to manifest: $intention"
           }
         ],
         "temperature": 0.8
