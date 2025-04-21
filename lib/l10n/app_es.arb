@@ -1,5 +1,10 @@
 {
   "@@locale": "es",
   "appTitle": "Bienvenida a M+",
-  "startPractice": "Comenzar mi práctica"
+  "startPractice": "Comenzar mi práctica",
+  "dailyAffirmationTitle": "Afirmación del día",
+  "howDoYouFeel": "¿Cómo te sientes hoy?",
+  "dailyAffirmationContent": "Mi potencial para tener éxito es ilimitado",
+  "dailyProgress": "Progreso diario",
+  "goToGuidedPractice": "Ir a mi práctica guiada"
 }
