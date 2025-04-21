@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WelcomeScreen extends StatelessWidget {
   final Locale currentLocale;
@@ -13,7 +12,11 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final t = AppLocalizations.of(context)!;
+    final isSpanish = currentLocale.languageCode == 'es';
+    final appTitle = isSpanish ? "Bienvenida a M+" : "Welcome to M+";
+    final startPractice = isSpanish
+        ? "Comenzar mi práctica"
+        : "Start my practice";
 
     return Scaffold(
       backgroundColor: const Color(0xFFF3F0EB),
@@ -41,7 +44,7 @@ class WelcomeScreen extends StatelessWidget {
               const Spacer(),
               Text('M+', style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Color(0xFF2E5D62))),
               const SizedBox(height: 16),
-              Text(t.appTitle, style: TextStyle(fontSize: 22, color: Colors.black54)),
+              Text(appTitle, style: TextStyle(fontSize: 22, color: Colors.black54)),
               const SizedBox(height: 32),
               ElevatedButton(
                 onPressed: () {},
@@ -50,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
                   padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                 ),
-                child: Text(t.startPractice, style: const TextStyle(color: Colors.white)),
+                child: Text(startPractice, style: const TextStyle(color: Colors.white)),
               ),
               const Spacer(),
             ],
